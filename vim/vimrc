@@ -1,0 +1,49 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" .vimrc - configuration file
+" author: Patrick Selge <pselge@cklio.com>
+" written: 2013-01-01
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set nocompatible		" Disable backwards compatibility to VI
+silent! call pathogen#runtime_append_all_bundles() " Load plugins
+
+
+" |~~~> Syntax
+syntax enable			" Enable syntax highlighting
+filetype plugin indent on	" Enable file type detection
+
+   " |   > Tabs
+   set softtabstop=2
+   set tabstop=2
+
+" |~~~> Menus
+set showcmd
+set showmode
+set wildmenu
+set wildmode=list:longest
+
+" |~~~> Position
+set number
+" set ruler		" is overwritten by the statusline and therefore commented out
+
+" |~~~> Appearance
+
+   " |   > Statusbar
+   set laststatus=2
+
+	    " |   x Color schemes
+	    hi User1 ctermbg=grey ctermfg=black   guibg=grey guifg=black
+	    hi User2 ctermbg=green   ctermfg=white  guibg=green   guifg=white
+	    hi User3 ctermbg=blue  ctermfg=white guibg=blue  guifg=white
+
+	 set statusline=
+	 set statusline+=%2*  "switch to User2 highlight
+	 set statusline+=%3.5(%y%)   "filetype
+	 set statusline+=%1*						"switch to User1 highlight
+	 set statusline+=\ %f\    "filename + parent folder
+	 set statusline+=%{fugitive#statusline()}\ \-\>\ %{fugitive#head()}
+	 set statusline+=%=
+	 set statusline+=%3*  "switch to User3 highlight
+	 set statusline+=%5.10((%l,%c)%)   "line number
+	 set statusline+=%*   "switch back to statusline highlight
+	 set statusline+=%3.7(%P%)   "percentage thru file
