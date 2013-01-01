@@ -32,18 +32,24 @@ set number
    set laststatus=2
 
 	    " |   x Color schemes
-	    hi User1 ctermbg=grey ctermfg=black   guibg=grey guifg=black
-	    hi User2 ctermbg=green   ctermfg=white  guibg=green   guifg=white
-	    hi User3 ctermbg=blue  ctermfg=white guibg=blue  guifg=white
+	    hi User1 ctermbg=grey		ctermfg=black   guibg=grey	guifg=black
+	    hi User2 ctermbg=green  ctermfg=white		guibg=green guifg=white
+	    hi User3 ctermbg=blue		ctermfg=white		guibg=blue  guifg=white
 
-	 set statusline=
-	 set statusline+=%2*  "switch to User2 highlight
-	 set statusline+=%3.5(%y%)   "filetype
-	 set statusline+=%1*						"switch to User1 highlight
-	 set statusline+=\ %f\    "filename + parent folder
-	 set statusline+=%{fugitive#statusline()}\ \-\>\ %{fugitive#head()}
-	 set statusline+=%=
-	 set statusline+=%3*  "switch to User3 highlight
-	 set statusline+=%5.10((%l,%c)%)   "line number
-	 set statusline+=%*   "switch back to statusline highlight
-	 set statusline+=%3.7(%P%)   "percentage thru file
+			" |   x Statusbar split into blocks
+			set statusline=															" clear the statusline
+			set statusline+=%2*													" switch to green highlight
+			set statusline+=\ %3.5(%y%)\								" show the filetype
+
+			set statusline+=%1*													" switch to white (grey)  highlight
+			set statusline+=\ %F\												" absolute filename
+			
+			set statusline+=%=													" align the following boxes right
+			set statusline+=%2*													" switch to green highlight
+			set statusline+=\ %{fugitive#statusline()}\	" show the Git branch
+	 
+			set statusline+=%3*													" switch to blue highlight
+			set statusline+=\ %5.10((%l,%c)%)\					" line number + column number
+	 
+			set statusline+=%*													" switch to default (grey) highlight
+			set statusline+=\ %3.7(%P%)\								" percentage thru file
