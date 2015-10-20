@@ -1,0 +1,20 @@
+# Sample gitconfig
+#
+
+[user]
+    name = AUTHORNAME
+    email = AUTHOREMAIL
+[alias]
+    co = checkout
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = true
+[core]
+    excludesfile = ~/.gitignore
+    editor = subl
+[apply]
+    whitespace = nowarn
+[push]
+    default = simple
