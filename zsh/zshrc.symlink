@@ -1,8 +1,11 @@
-# shortcut to this dotfiles path is $ZSH
-export ZSH=$HOME/.dotfiles
+# shortcut to this dotfiles path is $DOT
+export DOT=$HOME/.dotfiles
 
 # your project folder
 export PROJECTS=$HOME/Code
+
+export LC_ALL=de_DE.UTF-8
+export TERM=xterm-256color
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
@@ -13,7 +16,7 @@ fi
 
 # all of our zsh files
 typeset -U config_files
-config_files=($ZSH/**/*.zsh)
+config_files=($DOT/**/*.zsh)
 
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}
@@ -26,5 +29,7 @@ for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
 do
   source $file
 done
+
+export PATH=$PATH:$HOME/.bin
 
 unset config_files

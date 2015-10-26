@@ -1,1 +1,8 @@
 alias reload!='. ~/.zshrc'
+alias vup='vagrant up'
+alias vdown='vagrant halt'
+alias vprov='vagrant up --provision'
+alias vstatus='vagrant status'
+alias vssh='vagrant ssh'
+alias vrest='vdown; vup'
+alias vrepl='vdown; vprov'
