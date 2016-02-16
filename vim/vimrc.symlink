@@ -1,0 +1,53 @@
+syntax enable
+
+so ~/.vim/plugins.vim 
+
+colorscheme atom-dark-256
+
+let mapleader = ','
+
+"--------- Visuals -------------------
+set nobackup
+set nowritebackup
+set noswapfile
+set history=50
+" set ruler
+set showcmd
+set incsearch
+" set laststatus=2
+
+set tabstop=2
+set shiftwidth=2
+set shiftround
+set expandtab
+set textwidth=80
+set colorcolumn=+1
+
+set number
+set numberwidth=5
+
+set wildmode=list:longest,list:full
+set relativenumber
+
+"--------- Plugins -------------------
+let NERDTreeHijackNetrw = 0
+
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git'
+let g:ctrlp_match_window  = 'bottom,order:ttb,min:1,max:7,results:7'
+
+"--------- Mappings -------------------
+nmap <Leader>ev :tabedit $MYVIMRC<cr>
+
+nmap <Leader>tn :tabn<cr>
+nmap <Leader>tp :tabp<cr>
+nmap <Leader>tc :tabc<cr>
+nmap <Leader>te :tabe 
+
+nmap <C-k><C-b> :NERDTreeToggle<cr>
+nmap <D-k><D-b> :NERDTreeToggle<cr>
+
+"--------- Autosourcing -------------------
+augroup autosourcing
+  autocmd!
+  autocmd BufWritePost .vimrc source %
+augroup END
