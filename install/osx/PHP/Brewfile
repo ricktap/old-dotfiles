@@ -8,7 +8,7 @@ brew 'homebrew/php/composer'
 # Databases
 brew 'sqlite'
 brew 'mariadb'
-cask 'postgresql'
+brew 'postgresql'
 
 cask 'vagrant'
 cask 'vagrant-manager'
