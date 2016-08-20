@@ -18,6 +18,6 @@ brew 'mas'
 cask 'java'
 
 # Desktop
-mas 'Xcode', id: 497799835
-mas 'The Unarchiver', id: 425424353
-mas 'Caffeine', id: 411246225
+# mas 'Xcode', id: 497799835
+# mas 'The Unarchiver', id: 425424353
+# mas 'Caffeine', id: 411246225
