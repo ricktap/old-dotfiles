@@ -23,11 +23,13 @@ set expandtab
 set textwidth=80
 set colorcolumn=+1
 
-set number
-set numberwidth=5
+set numberwidth=4
 
 set wildmode=list:longest,list:full
 set relativenumber
+set number
+
+set timeoutlen=400             " timeout multi key commands
 
 "--------- Plugins -------------------
 let NERDTreeHijackNetrw = 0
@@ -43,8 +45,25 @@ nmap <Leader>tp :tabp<cr>
 nmap <Leader>tc :tabc<cr>
 nmap <Leader>te :tabe 
 
-nmap <C-k><C-b> :NERDTreeToggle<cr>
-nmap <D-k><D-b> :NERDTreeToggle<cr>
+nmap <Leader>nt :NERDTreeToggle<cr>
+
+nmap <Leader>r :!./%
+
+nmap <C-j> :m+1<CR>
+nmap <C-k> :m-2<CR>
+
+"------------ PHP Mappings ---------------
+nmap <Leader>pc  :!php composer 
+nmap <Leader>pci :!php composer install<CR>
+nmap <Leader>pcu :!php composer update<CR>
+nmap <Leader>la  :!php artisan 
+nmap <Leader>lm  :!php artisan make:
+nmap <Leader>ld  :!php artisan migrate<CR>
+nmap <Leader>pt  :!vendor/bin/phpunit<CR>
+nmap <Leader>ptc :!vendor/bin/phpunit 
+
+
+set backspace=indent,eol,start
 
 "--------- Autosourcing -------------------
 augroup autosourcing

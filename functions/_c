@@ -1,0 +1,6 @@
+#compdef c
+for project in $CODES; do
+    if [[ -d $project ]]; then
+        _files -W $project -/
+    fi;
+done

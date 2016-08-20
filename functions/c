@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+for project in $CODES; do
+    if [ -s "$project/$1" ]; then
+        cd "$project/$1"
+    fi
+done

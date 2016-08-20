@@ -14,5 +14,6 @@ Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/tComment'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
