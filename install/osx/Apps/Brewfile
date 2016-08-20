@@ -1,0 +1,32 @@
+tap 'caskroom/cask'
+tap 'homebrew/x11'
+
+# Middleware
+cask 'xquartz'
+
+# Desktop
+cask '1password'
+cask 'atom'
+cask 'sublime-text'
+mas 'Transmit', id: 403388562
+mas 'ResolutionTab', id: 540141595
+mas 'Reeder', id: 880001334
+mas 'Pixelmator', id: 407963104
+mas 'Xcode', id: 497799835
+mas 'Fantastical', id: 435003921
+mas 'Deliveries', id: 924726344
+mas 'MindNode Pro', id: 402398561
+mas 'Dash', id: 449589707
+mas 'Spillo', id: 873245660
+mas 'Marked 2', id: 890031187
+mas 'Pages', id: 409201541
+mas 'Slack', id: 803453959
+mas 'Evernote', id: 406056744
+mas 'WeatherPro', id: 966486618
+mas 'Boom', id: 415312377
+mas 'Airmail 2', id: 918858936
+mas 'ColorSchemer Studio', id: 417896628
+mas 'Numbers', id: 409203825
+mas 'Mental Case', id: 402688205
+mas 'Keynote', id: 409183694
+mas 'Skitch', id: 425955336

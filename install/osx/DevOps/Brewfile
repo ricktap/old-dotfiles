@@ -1,0 +1,9 @@
+tap 'caskroom/cask'
+
+brew 'ssh-copy-id'
+brew 'tmux'
+brew 'vim'
+brew 'wget'
+cask 'vagrant'
+cask 'vagrant-manager'
+brew 'packer'
