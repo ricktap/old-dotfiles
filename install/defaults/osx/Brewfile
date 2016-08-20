@@ -1,0 +1,17 @@
+tap 'caskroom/cask'
+tap 'homebrew/bundle'
+tap 'homebrew/core'
+tap 'homebrew/services'
+tap 'homebrew/x11'
+
+brew 'coreutils'
+brew 'macvim'
+brew 'mas'
+brew 'ssh-copy-id'
+brew 'tmux'
+brew 'vim'
+brew 'wget'
+
+mas 'Xcode', id: 497799835
+mas 'The Unarchiver', id: 425424353
+mas 'Caffeine', id: 411246225

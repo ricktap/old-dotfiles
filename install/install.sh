@@ -1,5 +1,7 @@
 #!/bin/zsh
 # Bash Menu Script Example
+#
+source $ZSH/script/lib/status.sh
 
 INSTALL_ROOT=$(dirname $0)
 
@@ -10,15 +12,20 @@ TO_INSTALL=()
 for bundle in $BUNDLES
 do
     bundleName=$(basename $bundle)
-    echo "Would you like to install the ${bundleName%.*} bundle?"
-    read -sk response
+    user "Would you like to install the ${bundleName%.*} bundle?"
+    read -qE response
 
-    if [[ $response -eq "y" ]]; then
+    if [ "$response" = 'y' ]; then
         TO_INSTALL+=(${bundleName})
+        success "${bundleName} bundle is set to install"
+    else
+        success "skipping ${bundleName} bundle installation"
     fi
 done
 
 for name in $TO_INSTALL
 do
-   $INSTALL_ROOT/osx/${name}/install.sh 
+   info "Installing ${name} bundle"
+   $INSTALL_ROOT/osx/${name}/install.sh
+   success "Installed ${name} bundle"
 done
