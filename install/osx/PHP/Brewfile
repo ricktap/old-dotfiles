@@ -1,13 +1,14 @@
 tap 'homebrew/php'
 
-# PHP 5.6 and 7.0
-brew 'homebrew/php/php56'
+# PHP 7.0
+# brew 'homebrew/php/php56' # old
 brew 'homebrew/php/php70'
+brew 'homebrew/php/composer'
 
 # Databases
 brew 'sqlite'
 brew 'mariadb'
-cask 'postgres'
+cask 'postgresql'
 
 cask 'vagrant'
 cask 'vagrant-manager'
